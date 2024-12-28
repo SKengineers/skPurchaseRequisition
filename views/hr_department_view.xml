@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_department_form_adding_destination_location" model="ir.ui.view">
+        <field name="name">view_department_form_adding_destination_location</field>
+        <field name="model">hr.department</field>
+        <field name="inherit_id" ref="hr.view_department_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='color']" position="after">
+                <field name="destination_location_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_department_tree_adding_destination_location" model="ir.ui.view">
+        <field name="name">view_department_tree_adding_destination_location</field>
+        <field name="model">hr.department</field>
+        <field name="inherit_id" ref="hr.view_department_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='color']" position="after">
+                <field name="destination_location_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

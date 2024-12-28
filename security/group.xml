@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="group_purchase_requisition_user" model="res.groups">
+        <field name="name">Material Purchase Requisition User</field>
+    </record>
+
+    <record id="group_purchase_requisition_manager" model="res.groups">
+        <field name="name">Material Purchase Requisition Manager</field>
+        <field name="implied_ids" eval="[(4, ref('ag_purchase_requisition.group_purchase_requisition_user'))]"/>
+    </record>
+
+    <record id="group_purchase_requisition_department_manager" model="res.groups">
+        <field name="name">Material Purchase Requisition Department Manager</field>
+        <field name="implied_ids" eval="[(4, ref('ag_purchase_requisition.group_purchase_requisition_user'))]"/>
+    </record>
+</odoo>

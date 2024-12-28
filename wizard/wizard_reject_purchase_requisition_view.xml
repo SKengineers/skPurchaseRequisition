@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="wizard_reject_purchase_requisition_form_view" model="ir.ui.view">
+            <field name="name">wizard_reject_purchase_requisition_form_view</field>
+            <field name="model">wizard.reject.purchase.requisition</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="reason" required="1"/>
+                    </sheet>
+                     <footer>
+                         <button name="action_reject" string="Confirm Reject" class="btn-secondary" type="object" confirm="Are you sure to reject this Purchase Requisition?"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+    </record>
+
+    <record id="wizard_reject_purchase_requisition_action_view" model="ir.actions.act_window">
+            <field name="name">Reject Purchase Requisition</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">wizard.reject.purchase.requisition</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+</odoo>
